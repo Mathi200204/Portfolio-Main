@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import {
-  Star,
   Award,
   Calendar,
   BookOpen,
-  GraduationCap,
-  Trophy,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -32,6 +29,16 @@ const EducationSection = () => {
       skills: [],
       description:
         "I have successfully completed my G.C.E. Advanced Level examination in the Physical Science stream with results of 2Bs and a C. At the G.C.E. Ordinary Level examination, I achieved 7As, 1B, and 1C, demonstrating a strong academic background and consistent performance throughout my studies.",
+    },
+    {
+      degree: "High School (Secondary Education) ",
+      school: " Jaffna Hindu College, Jaffna, Sri Lanka ",
+      mascot: "📗",
+      year: "2013-2017",
+      achievements: [],
+      skills: [],
+      description:
+        "Learning is an important part of life. Every day, we gain new knowledge from school, books, and experiences. Learning helps us understand the world better and solve problems. It also teaches us new skills, like reading, writing, and using technology. When we learn, we grow smarter, more confident, and ready to face challenges in the future. Everyone should try to learn something new every day.",
     },
   ];
 
@@ -74,7 +81,7 @@ const EducationSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
-            Educational Journey
+            Education
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
             Discover how academic excellence shapes innovative thinking and

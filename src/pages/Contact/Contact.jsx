@@ -48,7 +48,6 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prevent sending if validation fails
     if (!validateForm()) {
       setStatus("Please fill in all required fields correctly.");
       return;
@@ -59,9 +58,9 @@ export default function Contact() {
 
     const form = new FormData();
     form.append("access_key", "e5762289-c0ed-4983-98f5-f2005a4d4f89");
-    form.append("to_email", "mathiyalakan75@gmail.com"); // Correct recipient email
+    form.append("to_email", "mathiyalakan75@gmail.com");
     form.append("name", formData.name);
-    form.append("email", formData.email.trim()); // User's email
+    form.append("email", formData.email.trim());
     form.append("subject", formData.subject || "New Contact Form Submission");
     form.append("message", formData.message);
 
@@ -95,7 +94,6 @@ export default function Contact() {
           Contact
         </h2>
         <div className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
-          
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
@@ -105,7 +103,6 @@ export default function Contact() {
                 <p className="text-gray-300 text-lg">
                   Have a question or want to work together? Drop us a message!
                 </p>
-
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className="bg-purple-500/10 p-3 rounded-lg">
@@ -121,7 +118,6 @@ export default function Contact() {
                       </a>
                     </div>
                   </div>
-
                   <div className="flex items-center space-x-4">
                     <div className="bg-pink-500/10 p-3 rounded-lg">
                       <MapPin className="w-6 h-6 text-pink-400" />
@@ -165,7 +161,7 @@ export default function Contact() {
                       type="text"
                       name="subject"
                       placeholder="Subject (optional)"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border border-gray-700 focus:border-blue-500 focus:outline-none`}
+                      className="w-full px-4 py-3 rounded-lg bg-white/5 border border-gray-700 focus:border-blue-500 focus:outline-none"
                       value={formData.subject}
                       onChange={handleChange}
                     />
