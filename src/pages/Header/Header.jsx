@@ -64,7 +64,7 @@ export default function Header() {
         <div className="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
           <nav className="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
             <div className="flex justify-between items-center md:hidden px-2">
-              <div className="text-white font-bold">Portfolio</div>
+              <div className="text-white font-bold">Mathi's Portfolio</div>
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white p-2"

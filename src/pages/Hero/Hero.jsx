@@ -1,4 +1,3 @@
-// Hero.jsx (updated with ID for scrolling)
 import React from "react";
 import { useState, useEffect } from "react";
 import Prism from "prismjs";
