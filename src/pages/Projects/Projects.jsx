@@ -13,35 +13,42 @@ const projects = [
     color: "#5196fd",
     githubLink: "https://github.com/Mathi200204/Urban-Move-v1.0",
   },
+    {
+    title: "RhythmSpace - Music Learning Application",
+    description:
+      "I developed a modern and responsive music player web application using **React, Vite, Node.js with Express, MongoDB (Atlas), and Tailwind CSS**. The application features a clean and intuitive user interface, providing a smooth user experience. Core functionalities such as **play/pause, skip, previous track, and a seek bar with real-time progress tracking** were implemented to ensure seamless music playback.",
+    src: "rock.jpg",
+    link: "https://i.postimg.cc/651c0N3Z/Screenshot-224.png",
+    color: "#5196fd",
+    githubLink: "https://github.com/Mathi200204/Spotify-Clone",
+  },
+  {
+    title: "Personal Portfolio Website ",
+    description:
+      " I built a fully responsive portfolio website using React, Vite, Tailwind CSS, Web3Forms API, and Framer Motion, ensuring modern UI/UX and smooth performance across all devices. The project includes dynamic animations powered by Framer Motion to deliver an engaging and interactive user experience. Additionally, I implemented a functional contact form with validation and API integration via Web3Forms, enabling seamless and efficient client communication.",
+    src: "rock.jpg",
+    link: "https://i.postimg.cc/FH5dmPCq/Screenshot-225.png",
+    color: "#5196fd",
+    githubLink: "https://github.com/Mathi200204/Portfolio-Main",
+  },
   {
     title: "E-Commerce Web Application",
     description:
-      "Developed a responsive e-commerce platform with product catalog, cart, checkout",
+      "We designed and developed a microcontroller-based automated medicine dispenser as a group project, using HTML and CSS for the interface. The system automates medication scheduling and dispensing, ensuring timely and accurate dosage for users. It includes temperature monitoring and precise dosage control to improve safety. Additionally, we integrated a GSM module to send real-time SMS notifications to caregivers, providing reminders and confirmations of medicine intake.",
     src: "tree.jpg",
-    link: "",
+    link: "https://i.postimg.cc/Cxx1wWHc/Screenshot-220.png",
     color: "#8f89ff",
     githubLink: "https://github.com/Mathi200204/Web-Technologies",
-    liveLink: "",
   },
   {
-    title: "Automated Medicine Dispenser",
+    title: "Automated Medicine Dispenser(Hardware Project)",
     description:
-      "Designedandbuiltamicrocontroller-baseddevicetoautomatemedicationscheduling anddispensing.",
+      "We developed the Automated Medicine Dispenser as a group project, designing a microcontroller-based device to automate medication scheduling and dispensing. The system features an integrated NeoPixel LED strip for clear visual indicators such as medicine ready, high temperature, and low stock. We implemented temperature monitoring and precise dosage control to ensure user safety and integrated a GSM module to send real-time SMS notifications to caregivers for medicine reminders and intake confirmation. Additionally, a simple, user-friendly interface was developed for scheduling medication timings efficiently.",
     src: "water.jpg",
-    link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
+    link: "https://i.postimg.cc/T1yqjZ7V/last-hardware.jpg",
     color: "#fff",
     githubLink: "",
-    liveLink: "",
-  },
-  {
-    title: "Port folio Website",
-    description:
-      "CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/4xk5WZZY/Screenshot-219.png",
-    color: "#ed649e",
-    githubLink: "",
-    liveLink: "",
+    
   },
 ];
 
@@ -53,7 +60,6 @@ export default function Projects() {
   });
 
   useEffect(() => {
-    // Add specific styles for 1366x768 resolution
     const style = document.createElement("style");
     style.textContent = `
       @media screen and (width: 1366px) and (height: 768px),
@@ -70,7 +76,6 @@ export default function Projects() {
     `;
     document.head.appendChild(style);
 
-    // Resolution check function
     const checkResolution = () => {
       const isTargetResolution =
         window.innerWidth >= 1360 &&
@@ -142,13 +147,10 @@ function Card({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    
     <div
       ref={container}
       className="h-screen flex items-center justify-center sticky top-0 project-container"
     >
-      
-      
       <motion.div
         style={{
           scale,
@@ -162,13 +164,8 @@ function Card({
           transition: { duration: 0.3 },
         }}
       >
-        
-        {/* Modern split card design */}
         <div className="w-full flex flex-col md:flex-row bg-zinc-900 rounded-2xl overflow-hidden shadow-xl">
-          
-          {/* Image section - full width on mobile, 55% on desktop */}
           <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
-            
             <motion.img
               src={url}
               alt={title}
@@ -177,8 +174,6 @@ function Card({
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
             />
-
-            {/* Colored overlay on hover */}
             <motion.div
               className="absolute inset-0"
               style={{ backgroundColor: color, mixBlendMode: "overlay" }}
@@ -186,14 +181,11 @@ function Card({
               whileHover={{ opacity: 0.3 }}
               transition={{ duration: 0.3 }}
             />
-
-            {/* Project number */}
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
               Project {i + 1}
             </div>
           </div>
 
-          {/* Content section - full width on mobile, 45% on desktop */}
           <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-4 md:mb-6">
@@ -214,9 +206,7 @@ function Card({
 
             <div className="mt-4 md:mt-auto pt-4">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
-
               <div className="flex items-center gap-4">
-                {/* GitHub Link */}
                 <motion.a
                   href={githubLink}
                   target="_blank"
@@ -238,23 +228,9 @@ function Card({
                   >
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
-                  <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color }}
-                  >
+                  <span className="text-xs md:text-sm font-medium" style={{ color }}>
                     Code
                   </span>
-                </motion.a>
-
-                {/* Live Link */}
-                <motion.a
-                  href={liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
                 </motion.a>
               </div>
             </div>
@@ -265,7 +241,6 @@ function Card({
   );
 }
 
-// Add PropTypes validation
 Card.propTypes = {
   i: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
