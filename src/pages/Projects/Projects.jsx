@@ -43,7 +43,7 @@ const projects = [
   {
     title: "Automated Medicine Dispenser(Hardware Project)",
     description:
-      "We developed the Automated Medicine Dispenser as a group project, designing a microcontroller-based device to automate medication scheduling and dispensing. The system features an integrated NeoPixel LED strip for clear visual indicators such as medicine ready, high temperature, and low stock. We implemented temperature monitoring and precise dosage control to ensure user safety and integrated a GSM module to send real-time SMS notifications to caregivers for medicine reminders and intake confirmation. Additionally, a simple, user-friendly interface was developed for scheduling medication timings efficiently.",
+      "We created the Automated Medicine Dispenser as a group project, designing a microcontroller-based device to automate medication scheduling and dispensing. The system features an integrated NeoPixel LED strip for clear visual indicators such as medicine ready, high temperature, and low stock. We implemented temperature monitoring and precise dosage control to ensure user safety and integrated a GSM module to send real-time SMS notifications to caregivers for medicine reminders and intake confirmation. Additionally, a simple, user-friendly interface was developed for scheduling medication timings efficiently.",
     src: "water.jpg",
     link: "https://i.postimg.cc/T1yqjZ7V/last-hardware.jpg",
     color: "#fff",
