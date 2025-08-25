@@ -1,8 +1,11 @@
+// Hero.jsx (updated with ID for scrolling)
+import React from "react";
 import { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
 import "@/assets/css/tomorrow.css";
 import Meteors from "@/components/ui/meteors";
+import PortfolioPage from "@/pages/About/About";
 import SparklesText from "@/components/ui/sparkles-text";
 import { FlipWords } from "@/components/ui/flip-words";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -43,8 +46,8 @@ const GridBackground = () => {
 export default function Hero() {
   const words = [
     "Full-Stack Developer",
-    "JavaScript Developer",
-    "MERN Stack Developer",
+    "Programmer",
+    "A Passionate IT Undergraduate",
   ];
 
   const [code] = useState(`
@@ -171,7 +174,6 @@ const profile = {
               {/* Decorative blurs */}
               <div className="absolute hidden lg:-top-20 lg:-left-20 lg:block w-48 h-48 lg:w-64 lg:h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
               <div className="absolute hidden lg:block lg:top-40 lg:-right-20 w-48 h-48 lg:w-64 lg:h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
-
               {/* Welcome badge */}
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
@@ -179,7 +181,6 @@ const profile = {
                   Welcome to my universe
                 </span>
               </div>
-
               {/* Name section */}
               <div className="relative mb-6 sm:mb-8">
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
@@ -194,7 +195,6 @@ const profile = {
                 </h1>
                 <div className="absolute -z-10 top-1/2 -translate-y-1/2 left-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
               </div>
-
               {/* Role badge */}
               <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
                 <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
@@ -205,15 +205,13 @@ const profile = {
                   />
                 </span>
               </div>
-
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | Crafting frameworks and coding the
+                  Code Enthusiast  🚀 | Crafting frameworks and coding the
                   future 💻✨
                 </p>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 <a
@@ -250,29 +248,28 @@ const profile = {
                   </span>
                 </a>
               </div>
-              <div className="flex flex-row sm:flex-row gap-4 mt-4 justify-center">
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/_mathi0405_?igsh=MThhNTVjaXYwdmhjMA=="
-    className="group inline-flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaInstagram className="text-xl sm:text-2xl text-gray-300 group-hover:text-white" />
-  </a>
+              
+              <div className="flex flex-row sm:flex-row gap-4 mt-4 justify-center sm:justify-start">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/_mathi0405_?igsh=MThhNTVjaXYwdmhjMA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                >
+                  <FaInstagram className="text-gray-300 group-hover:text-white text-xl sm:text-2xl" />
+                </a>
 
-  {/* Facebook */}
-  <a
-    href="https://www.facebook.com/share/19hrznEXnM/"
-    className="group inline-flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaFacebookF className="text-xl sm:text-2xl text-gray-300 group-hover:text-white" />
-  </a>
-</div>
-
-
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/share/19hrznEXnM/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                >
+                  <FaFacebookF className="text-gray-300 group-hover:text-white text-xl sm:text-2xl" />
+                </a>
+              </div>
               {/* Floating badges */}
               <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
                 <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
@@ -322,6 +319,7 @@ const profile = {
           </span>
           <i className="fas fa-chevron-down text-blue-400 text-xl"></i>
         </div>
+        <PortfolioPage />
       </main>
     </>
   );
