@@ -52,7 +52,7 @@ export default function Hero() {
   const [code] = useState(`
 const profile = {
     name: 'Mathiyalakan Arulkumaran',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
+    title: 'Full-Stack Developer | Problem Solver',
     skills: [
         'React','Express','Node',
         'MySQL', 'MongoDB', 'Java',

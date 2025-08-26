@@ -2,8 +2,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
-  base: "/Portfolio-Main",   
+export default defineConfig({   
   plugins: [react()],
   resolve: {
     alias: {
