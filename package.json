@@ -1,5 +1,6 @@
 {
   "name": "react",
+  "homepage": "https://Mathi200204.github.io/Portfolio-Main",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build" 
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
