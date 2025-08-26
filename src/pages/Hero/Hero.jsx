@@ -188,7 +188,7 @@ const profile = {
                     I&apos;m
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Mathiyalakan Arulkumarn
+                      Mathiyalakan Arulkumaran
                     </span>
                   </span>
                 </h1>
