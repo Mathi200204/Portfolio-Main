@@ -5,27 +5,27 @@ import PropTypes from "prop-types";
 
 const projects = [
   {
-    title: "Urban Move — Cab Booking Car Rental Platform ",
+    title: "Urban Move — Cab Booking Car Rental Platform",
     description:
-      " Developedafull-stackMERNapplicationenablingreal-timecabbookings,scheduledrides,andself-driverentalswithrole-basedaccess",
+      "Built a full-stack MERN app for real-time cab booking, ride scheduling, and self-drive rentals with role-based access.",
     src: "rock.jpg",
     link: "https://i.postimg.cc/V6L4XRw4/Screenshot-215.png",
     color: "#5196fd",
     githubLink: "https://github.com/Mathi200204/Urban-Move-v1.0",
   },
-    {
+  {
     title: "RhythmSpace - Music Learning Application",
     description:
-      "I developed a modern and responsive music player web application using **React, Vite, Node.js with Express, MongoDB (Atlas), and Tailwind CSS**. The application features a clean and intuitive user interface, providing a smooth user experience. Core functionalities such as **play/pause, skip, previous track, and a seek bar with real-time progress tracking** were implemented to ensure seamless music playback.",
+      "Built a responsive music player web app with React, Node.js, MongoDB, and Tailwind CSS featuring core playback controls and real-time progress tracking.",
     src: "rock.jpg",
     link: "https://i.postimg.cc/651c0N3Z/Screenshot-224.png",
     color: "#5196fd",
     githubLink: "https://github.com/Mathi200204/Spotify-Clone",
   },
   {
-    title: "Personal Portfolio Website ",
+    title: "Personal Portfolio Website",
     description:
-      " I built a fully responsive portfolio website using React, Vite, Tailwind CSS, Web3Forms API, and Framer Motion, ensuring modern UI/UX and smooth performance across all devices. The project includes dynamic animations powered by Framer Motion to deliver an engaging and interactive user experience. Additionally, I implemented a functional contact form with validation and API integration via Web3Forms, enabling seamless and efficient client communication.",
+      "Built a responsive portfolio website with React, Vite, Tailwind CSS, and Framer Motion, featuring dynamic animations and a functional contact form integrated with Web3Forms API.",
     src: "rock.jpg",
     link: "https://i.postimg.cc/FH5dmPCq/Screenshot-225.png",
     color: "#5196fd",
@@ -34,21 +34,20 @@ const projects = [
   {
     title: "E-Commerce Web Application",
     description:
-      "We designed and developed a microcontroller-based automated medicine dispenser as a group project, using HTML and CSS for the interface. The system automates medication scheduling and dispensing, ensuring timely and accurate dosage for users. It includes temperature monitoring and precise dosage control to improve safety. Additionally, we integrated a GSM module to send real-time SMS notifications to caregivers, providing reminders and confirmations of medicine intake.",
+      "Developed a small e-commerce website using HTML and CSS, creating a structured product listing, functional cart interface, and clean layout for easy navigation and user interaction.",
     src: "tree.jpg",
     link: "https://i.postimg.cc/Cxx1wWHc/Screenshot-220.png",
     color: "#8f89ff",
     githubLink: "https://github.com/Mathi200204/Web-Technologies",
   },
   {
-    title: "Automated Medicine Dispenser(Hardware Project)",
+    title: "Automated Medicine Dispenser (Hardware Project)",
     description:
-      "We created the Automated Medicine Dispenser as a group project, designing a microcontroller-based device to automate medication scheduling and dispensing. The system features an integrated NeoPixel LED strip for clear visual indicators such as medicine ready, high temperature, and low stock. We implemented temperature monitoring and precise dosage control to ensure user safety and integrated a GSM module to send real-time SMS notifications to caregivers for medicine reminders and intake confirmation. Additionally, a simple, user-friendly interface was developed for scheduling medication timings efficiently.",
+      "Developed a microcontroller-based Automated Medicine Dispenser with LED indicators, temperature monitoring, precise dosage control, GSM notifications, and a simple interface for efficient medication scheduling.",
     src: "water.jpg",
     link: "https://i.postimg.cc/T1yqjZ7V/last-hardware.jpg",
     color: "#fff",
     githubLink: "",
-    
   },
 ];
 
@@ -207,31 +206,33 @@ function Card({
             <div className="mt-4 md:mt-auto pt-4">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-4">
-                <motion.a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                {githubLink && (
+                  <motion.a
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2"
+                    whileHover={{ y: -3 }}
+                    transition={{ type: "spring", stiffness: 400 }}
                   >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span className="text-xs md:text-sm font-medium" style={{ color }}>
-                    Code
-                  </span>
-                </motion.a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke={color}
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span className="text-xs md:text-sm font-medium" style={{ color }}>
+                      Code
+                    </span>
+                  </motion.a>
+                )}
               </div>
             </div>
           </div>
@@ -251,5 +252,5 @@ Card.propTypes = {
   range: PropTypes.array.isRequired,
   targetScale: PropTypes.number.isRequired,
   githubLink: PropTypes.string.isRequired,
-  liveLink: PropTypes.string.isRequired,
+  liveLink: PropTypes.string,
 };

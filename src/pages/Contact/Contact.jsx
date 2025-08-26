@@ -124,7 +124,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Location</h3>
-                      <p className="text-gray-400">Kilinochchi, Sri Lanka</p>
+                      <p className="text-gray-400">kannakinagar,visuvamadu,Kilinochchi, Sri Lanka</p>
                     </div>
                   </div>
                 </div>

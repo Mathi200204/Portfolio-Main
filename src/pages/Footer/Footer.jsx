@@ -119,7 +119,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-teal-400" />
-                <span className="text-gray-400 text-sm">Kilinochchi, Sri Lanka</span>
+                <span className="text-gray-400 text-sm">kannakinagar,visuvamadu,Kilinochchi, Sri Lanka</span>
               </div>
             </div>
           </div>
